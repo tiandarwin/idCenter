@@ -142,9 +142,8 @@ public class IDServiceImpl implements IDService {
     return map;
   }
 
-  public CompressedIds<Long> nextCompressedValues(String sequence, int count) {
-    // TODO Auto-generated method stub
-    return null;
+  public CompressedIds nextCompressedValues(String sequence, int count) {
+    return new CompressedIds(nextValues(sequence, count));
   }
 
   public int nextIntValue(String sequence) {
@@ -165,11 +164,6 @@ public class IDServiceImpl implements IDService {
       map.put(seqName, nextIntValues(seqName, count));
     }
     return map;
-  }
-
-  public CompressedIds<Integer> nextCompressedIntValues(String sequence, int count) {
-    // TODO Auto-generated method stub
-    return null;
   }
 
   /**

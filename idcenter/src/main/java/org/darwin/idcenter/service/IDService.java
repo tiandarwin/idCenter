@@ -43,7 +43,7 @@ public interface IDService {
    * @return
    * <br/>created by Tianxin on 2015年8月6日 下午1:01:18
    */
-  CompressedIds<Long> nextCompressedValues(String sequence, int count);
+  CompressedIds nextCompressedValues(String sequence, int count);
   
   /**
    * 获取下一个int类型的ID
@@ -68,13 +68,4 @@ public interface IDService {
    * <br/>created by Tianxin on 2015年8月6日 下午1:01:56
    */
   Map<String, int[]> nextIntValues(Map<String, Integer> sequenceSizes);
-  
-  /**
-   * 获取count个id，并以压缩方式返回
-   * @param sequence
-   * @param count
-   * @return
-   * <br/>created by Tianxin on 2015年8月6日 下午1:01:59
-   */
-  CompressedIds<Integer> nextCompressedIntValues(String sequence, int count);
 }
