@@ -4,6 +4,12 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="simpleGenericDao-0.0.4-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/simpleGenericDao/simpleGenericDao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-0.0.3-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/commons/commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="idcenter"/>
         <property name="java-output-path" value="/idcenter/target/classes"/>
     </wb-module>
