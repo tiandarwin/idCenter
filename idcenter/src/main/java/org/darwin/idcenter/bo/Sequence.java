@@ -39,6 +39,11 @@ public class Sequence extends BaseObject<Integer> {
    */
   private Date lastModified;
   
+  /**
+   * 客户端缓存的数量
+   */
+  private int cacheSize;
+  
   public String getSeqName() {
     return seqName;
   }
@@ -69,6 +74,14 @@ public class Sequence extends BaseObject<Integer> {
 
   public void setLastModified(Date lastModified) {
     this.lastModified = lastModified;
+  }
+  
+  public int getCacheSize() {
+    return cacheSize;
+  }
+
+  public void setCacheSize(int cacheSize) {
+    this.cacheSize = cacheSize;
   }
 
   /**

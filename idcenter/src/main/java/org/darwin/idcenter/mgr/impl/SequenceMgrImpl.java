@@ -37,11 +37,6 @@ public class SequenceMgrImpl implements SequenceMgr{
    */
   protected final static Logger LOG = LoggerFactory.getLogger(SequenceMgrImpl.class);
 
-  public long getNextValues(int seqId, int size) {
-    Sequence seq = sequenceDao.get(seqId);
-    return nextValue(seq, size, 0);
-  }
-
   /**
    * 从数据库中获取相应的值
    * @param seq
@@ -79,7 +74,7 @@ public class SequenceMgrImpl implements SequenceMgr{
   }
 
   public long getNextValues(String seqName, int size) {
-    Sequence seq = sequenceDao.getByType(seqName);
+    Sequence seq = sequenceDao.getByName(seqName);
     return nextValue(seq, size, 0);
   }
 

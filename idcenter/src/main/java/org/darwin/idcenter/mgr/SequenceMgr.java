@@ -13,15 +13,6 @@ import org.darwin.idcenter.bo.Sequence;
  * <br/>created by Tianxin on 2015年8月6日 下午1:49:46
  */
 public interface SequenceMgr {
-
-  /**
-   * 向数据库中申请size个ID
-   * @param seqId
-   * @param size
-   * @return
-   * <br/>created by Tianxin on 2015年8月6日 下午1:34:23
-   */
-  long getNextValues(int seqId, int size);
   
   /**
    * 向数据库中申请size个ID

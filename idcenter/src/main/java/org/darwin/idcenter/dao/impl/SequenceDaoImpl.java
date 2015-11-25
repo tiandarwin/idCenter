@@ -34,7 +34,7 @@ public class SequenceDaoImpl extends GenericDao<Integer, Sequence> implements Se
     super.setJdbcTemplate(jdbcTemplate);
   }
 
-  public Sequence getByType(String seqName) {
+  public Sequence getByName(String seqName) {
     return findOne(Matches.one("seq_type", seqName));
   }
 

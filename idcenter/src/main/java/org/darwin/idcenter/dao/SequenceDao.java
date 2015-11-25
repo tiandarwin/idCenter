@@ -21,7 +21,7 @@ public interface SequenceDao extends BaseDao<Integer, Sequence> {
    * @return
    * <br/>created by Tianxin on 2015年8月6日 下午1:53:04
    */
-  Sequence getByType(String seqName);
+  Sequence getByName(String seqName);
 
   /**
    * 将sequence的当前水位提升至newValue
